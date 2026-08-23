@@ -15,7 +15,12 @@
 .toast{position:fixed;z-index:100;bottom:105px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:9px 14px;border-radius:3px;font-size:11px;display:none}.page-note{margin:18px;background:#fff;border:1px solid #eee;padding:15px;text-align:center;color:#777;font-size:11px}.page-note .orn{font-size:28px;letter-spacing:5px;color:#555;margin-bottom:5px}.page-note strong{color:#222}.hidden{display:none}
 @media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);gap:9px}.hero h1{font-size:25px}.intro{font-size:12px}.surah{min-height:140px;padding:13px}.arabic-name{font-size:26px}.head .arabic-name{font-size:35px}.close{right:10px}.modal{padding:8px 0}.modal-card{width:96%}.ayah{padding:15px 13px}.ayah-ur{font-size:17px}.reader-note{margin:12px}.page-note{margin:12px}}
 @media(max-width:430px){.grid{grid-template-columns:1fr 1fr}.latin{font-size:10px}.meta{font-size:8px}.searchbox{height:40px}.controls{gap:3px}.ctrl{width:32px;height:32px}.ctrl.main{width:39px;height:39px}.nowtitle{font-size:11px}}
-</style></head><body>
+</style></head><link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#071712"><body><script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js");
+}
+</script>
 <header class="hero wrap"><div class="crumbs"><span>Home</span><span>›</span><span>Islam</span><span>›</span><span>Online Audio Quran</span><span>›</span><b>قرآن اردو ترجمہ</b></div><h1>قرآن پاک اردو ترجمہ کے ساتھ</h1><p class="intro">قرآن پاک کی تمام سورتیں عربی تلاوت، واضح اردو ترجمہ اور آڈیو کے ساتھ پڑھیں۔ ہر آیت پہلے <b>یاسر الدوسری</b> کی آواز میں اور پھر اسی آیت کا اردو ترجمہ <b>شمشاد علی خان</b> کی آواز میں خودکار طور پر چلایا جائے گا۔</p></header>
 <section class="search"><div class="wrap"><div class="searchbox"><input id="search" placeholder="سورت تلاش کریں..."><button id="random">🎲</button></div><div class="filters"><button class="filter active" data-f="all">تمام 114</button><button class="filter" data-f="fav">⭐ پسندیدہ</button><button class="filter" data-f="mecca">مکی</button><button class="filter" data-f="madina">مدنی</button></div></div></section>
 <main class="wrap"><section class="info-card"><div class="info-title">قرآن پاک مع اردو ترجمہ</div><div class="info-text">سورت منتخب کریں، پھر آیت بہ آیت سماعت کریں۔ عربی تلاوت کے بعد فوراً اسی آیت کا اردو ترجمہ چلے گا۔ اردو ترجمہ: مولانا فتح محمد جالندھری، آواز: شمشاد علی خان۔</div></section><div class="count" id="count">سورتیں لوڈ ہو رہی ہیں...</div><div class="grid" id="grid"></div></main>
