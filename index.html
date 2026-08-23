@@ -1,4 +1,5 @@
-<!doctype html><html lang="ur" dir="rtl"><head>
+<!doctype html><html lang="ur" dir="rtl"><<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#071712">>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#071712"><title>القرآن الكريم • Yasser Al-Dosari • اردو ترجمہ: شمشاد علی خان</title><link rel="manifest" href="manifest.json">
 <style>
@@ -212,4 +213,8 @@ load();
                 console.error("Service Worker Error:", error);
             });
     });
-}/script></body></html>
+}/script><script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js");
+}
+</script></body></html>
