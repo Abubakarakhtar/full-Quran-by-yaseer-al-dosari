@@ -201,4 +201,15 @@ $("bar").onclick=e=>{if(audio.duration){let r=e.currentTarget.getBoundingClientR
 $("search").oninput=render;document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");render()});$("random").onclick=()=>surahs.length&&openSurah(Math.floor(Math.random()*114)+1);document.addEventListener("keydown",e=>e.key==="Escape"&&!$("modal").hidden&&close());
 if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.warn))}
 load();
-</script></body></html>
+<if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker
+            .register("./sw.js")
+            .then(() => {
+                console.log("Quran Offline Mode Ready");
+            })
+            .catch(error => {
+                console.error("Service Worker Error:", error);
+            });
+    });
+}/script></body></html>
